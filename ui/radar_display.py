@@ -23,8 +23,8 @@ class RadarEntity:
         self.y = random.uniform(50, HEIGHT - 50)
         
         # Velocity vectors for movement
-        self.velocity_x = random.uniform(-1.5, 1.5)
-        self.velocity_y = random.uniform(-1.5, 1.5)
+        self.velocity_x = random.uniform(-0.5, 0.5)
+        self.velocity_y = random.uniform(-0.5, 0.5)
 
     def update_position(self):
         """Moves the entity and handles boundary collisions."""
@@ -66,7 +66,7 @@ def start_radar_simulation():
     clock = pygame.time.Clock()
 
     # Initialize a list of random radar entities
-    radar_entities = [RadarEntity() for _ in range(40)]
+    radar_entities = [RadarEntity() for _ in range(15)]
     sweep_angle = 0.0 
 
     is_running = True
