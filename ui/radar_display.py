@@ -83,20 +83,22 @@ def start_radar_simulation():
         # RENDER GRAPHICS
         draw_radar_background(screen, sweep_angle)
 
-        # Calculate and draw the closest pair
-        from algorithms.closest_pair import get_closest_pair
-        min_dist, closest_pair = get_closest_pair(radar_entities)
+        # Calculate and draw all pairs within a danger threshold
+        from algorithms.closest_pair import get_pairs_within_distance
+        DANGER_DISTANCE = 80.0
+        dangerous_pairs = get_pairs_within_distance(radar_entities, DANGER_DISTANCE)
         
-        if closest_pair is not None:
-            p1, p2 = closest_pair
-            # Draw a red line between the closest points to alert for collision
-            pygame.draw.line(screen, (255, 50, 50), (int(p1.x), int(p1.y)), (int(p2.x), int(p2.y)), 2)
+        dangerous_entities = set()
+        for p1, p2 in dangerous_pairs:
+            pygame.draw.line(screen, (255, 100, 50), (int(p1.x), int(p1.y)), (int(p2.x), int(p2.y)), 2)
+            dangerous_entities.add(p1)
+            dangerous_entities.add(p2)
 
         # Render entities
         for entity in radar_entities:
-            # Highlight the closest pair points in red, others in green
-            color = (255, 50, 50) if closest_pair and (entity in closest_pair) else COLOR_RADAR_GREEN
-            radius = 5 if closest_pair and (entity in closest_pair) else 3
+            # Highlight the dangerous points
+            color = (255, 50, 50) if entity in dangerous_entities else COLOR_RADAR_GREEN
+            radius = 5 if entity in dangerous_entities else 3
             pygame.draw.circle(screen, color, (int(entity.x), int(entity.y)), radius)
 
         pygame.display.flip()
