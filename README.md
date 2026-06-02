@@ -14,6 +14,8 @@
 
 Este projeto é uma simulação de controle de tráfego aéreo/radar utilizando a biblioteca visual **Pygame**. O principal foco da aplicação é demonstrar a aplicação prática de algoritmos clássicos do paradigma **Dividir e Conquistar** para processar posições no plano 2D e detectar riscos de colisão entre aeronaves em tempo real, de forma eficiente.
 
+![Simulação de Radar](img/radar.png)
+
 ## ⚙️ Algoritmos Implementados
 
 O projeto soluciona a detecção de ameaças utilizando conceitos pesados do paradigma de divisão:
