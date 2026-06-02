@@ -1,7 +1,8 @@
 # Radar de Proximidade
 
-**Projeto de Algoritmos (PA) - UnB 2026.1**  
-**Módulo:** Dividir e Conquistar  
+**Projeto de Algoritmos (PA) - UnB 2026.1**
+**Módulo:** Dividir e Conquistar
+**Vídeo:** ![https://www.youtube.com/watch?v=eJ7viOlsCWs](https://www.youtube.com/watch?v=eJ7viOlsCWs)
 **Repositório do Grupo 26**
 
 **Integrantes:**
@@ -20,7 +21,7 @@ Este projeto é uma simulação de controle de tráfego aéreo/radar utilizando 
 
 O projeto soluciona a detecção de ameaças utilizando conceitos pesados do paradigma de divisão:
 
-* **Mediana das Medianas (Median of Medians - MOM):** 
+* **Mediana das Medianas (Median of Medians - MOM):**
   Implementado no arquivo `algorithms/median_selection.py`. É utilizado para encontrar de forma determinística (em tempo linear $O(N)$) o k-ésimo menor elemento de um array não ordenado. Neste projeto, ele é o motor principal que encontra o pivô exato para o particionamento equilibrado das aeronaves no eixo X em cada passo da recursão.
 
 * **Par de Pontos Mais Próximos (Closest Pairs of Points) - Adaptado:**
