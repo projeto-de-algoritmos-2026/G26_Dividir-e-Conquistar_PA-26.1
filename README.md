@@ -1,8 +1,8 @@
 # Radar de Proximidade
 
 **Projeto de Algoritmos (PA) - UnB 2026.1**
-**Módulo:** Dividir e Conquistar
-**Vídeo:** ![https://www.youtube.com/watch?v=eJ7viOlsCWs](https://www.youtube.com/watch?v=eJ7viOlsCWs)
+**Módulo:** Dividir e Conquistar<br>
+**Vídeo:** https://www.youtube.com/watch?v=eJ7viOlsCWs<br>
 **Repositório do Grupo 26**
 
 **Integrantes:**
